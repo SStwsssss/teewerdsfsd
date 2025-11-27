@@ -1,0 +1,178 @@
+
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
+local Window = Library.CreateLib("Smilley", "RJTheme3")
+local player = game.Players.LocalPlayer
+local character = player.Character
+local i = 0
+local s = Instance.new("Highlight")
+local character = player.Character
+
+local Tab = Window:NewTab("Main")
+
+
+
+local Section = Tab:NewSection("Basic Functions")
+Section:NewButton("Fling","Killing Npcs", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/LgZwZ7ZB",true))()
+end)
+
+Section:NewButton("GameOVer","Killing Npcs", function()
+for i, d in pairs(game.Workspace:GetDescendants()) do
+    if d.ClassName == "Humanoid" then
+        local character = d.Parent
+        local player = game.Players:GetPlayerFromCharacter(character)
+        if player == nil then
+            d.Health = 0
+        end
+    end
+end
+end)
+
+Section:NewSlider("Speed Hack", "Adding Speed To Your Humanoid", 200, 0, function(s) -- 200 (Макс. значение) | 0 (Мин. значение)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+
+Section:NewToggle("GodMode", "Dont 100% Defense", function(state)
+    if state then
+        for _, part in pairs(character:GetChildren()) do
+		if part:IsA("Part") or part.Name == "Hitbox" then
+			part.CanTouch = false
+		end
+        end  
+
+    else
+        for _, part in pairs(character:GetChildren()) do
+    if part:IsA("Part") or part.Name == "Hitbox" then
+        part.CanTouch = true
+    end
+end    
+end
+end)
+
+Section:NewButton("ShortCut (No CD)", "Shortcut", function()
+mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "ShortCut"
+tool.Activated:connect(function()
+local pos = mouse.Hit+Vector3.new(0,2.5,0)
+pos = CFrame.new(pos.X,pos.Y,pos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+end)
+
+Section:NewButton("Fast Interact", "Shortcut", function()
+while wait(0.01) do
+for i , obj in pairs(game.Workspace:GetDescendants()) do
+if obj.Name == "ProximityPrompt" then
+obj.HoldDuration = 0
+wait(0.00001)
+end
+end
+end
+end)
+
+
+local Tab = Window:NewTab("Loop Mobs")
+
+
+
+local Section = Tab:NewSection("Basic Functions")
+
+Section:NewButton("UUAHater","Killing for 1 Second (Have BYpass)", function()
+for i , obj in pairs(game.Workspace:GetChildren()) do
+if obj.Name == "UUAHater" then
+obj.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -10, 0)
+end
+end
+end)
+
+Section:NewButton("RetroHater","Killing for 1 Second (Have BYpass)", function()
+for i , obj in pairs(game.Workspace:GetChildren()) do
+if obj.Name == "RetroHater" then
+obj.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -10, 0)
+end
+end
+end)
+
+Section:NewButton("CodeHater","Killing for 1 Second (Have BYpass)", function()
+for i , obj in pairs(game.Workspace:GetChildren()) do
+if obj.Name == "CodeHater" then
+obj.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -10, 0)
+end
+end
+end)
+
+Section:NewButton("EvilHater","Killing for 1 Second (Have BYpass)", function()
+for i , obj in pairs(game.Workspace:GetChildren()) do
+if obj.Name == "EvilHater" or obj.Name == "EvilHater2" or obj.Name == "EvilHater3" then
+obj.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -10, 0)
+end
+end
+end)
+
+local Tab = Window:NewTab("Npc Finder")
+
+
+
+local Section = Tab:NewSection("Basic Functions")
+
+Section:NewButton("Reaper","Killing for 1 Second (Have BYpass)", function()
+player.Character:PivotTo(CFrame.new(-273.6278381347656, 1063.1788330078125, -3056.19775390625))
+end)
+
+Section:NewButton("Evil Npc","Killing for 1 Second (Have BYpass)", function()
+player.Character:PivotTo(CFrame.new(88.0291748046875, 1376.8350830078125, 2777.0244140625))
+end)
+
+Section:NewButton("Double","Killing for 1 Second (Have BYpass)", function()
+player.Character:PivotTo(CFrame.new(-757.5880126953125, 1344.96826171875, 3515.4560546875))
+end)
+
+Section:NewButton("Covergence","Killing for 1 Second (Have BYpass)", function()
+player.Character:PivotTo(CFrame.new(-435.3971252441406, 1344.993408203125, 3002.2900390625))
+end)
+
+
+
+local Tab = Window:NewTab("Locations")
+
+
+
+local Section = Tab:NewSection("Basic Functions")
+
+Section:NewButton("Main","Killing for 1 Second (Have BYpass)", function()
+player.Character:PivotTo(CFrame.new(603.2947998046875, 55.499996185302734, -1340.1737060546875))
+end)
+
+Section:NewButton("The Abyss","Killing for 1 Second (Have BYpass)", function()
+player.Character:PivotTo(CFrame.new(-776.22705078125, 1343.4022216796875, 3064.748291015625))
+end)
+
+Section:NewButton("THE AFTERMATH","Killing for 1 Second (Have BYpass)", function()
+player.Character:PivotTo(CFrame.new(-8707.1162109375, 130.72537231445312, -1229.0970458984375))
+end)
+
+Section:NewButton("Overworld","Killing for 1 Second (Have BYpass)", function()
+player.Character:PivotTo(CFrame.new(5616.4697265625, 18.9140625, -294.6884460449219))
+end)
+
+Section:NewButton("FatalError","Killing for 1 Second (Have BYpass)", function()
+player.Character:PivotTo(CFrame.new(-8469.6162109375, 126.40504455566406, 10359.9033203125))
+end)
+
+Section:NewButton("Cave","Killing for 1 Second (Have BYpass)", function()
+player.Character:PivotTo(CFrame.new(-31.74873924255371, 1269.61669921875, -1018.3350830078125))
+end)
+
+Section:NewButton("Test Place","Killing for 1 Second (Have BYpass)", function()
+player.Character:PivotTo(CFrame.new(-678.7194213867188, 106.69587707519531, -2512.697265625))
+end)
+
+
+
+
+
