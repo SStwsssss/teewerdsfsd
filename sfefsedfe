@@ -13,9 +13,7 @@ local Tab = Window:NewTab("Main")
 
 
 local Section = Tab:NewSection("Basic Functions")
-Section:NewButton("Fling","Killing Npcs", function()
-loadstring(game:HttpGet("https://pastebin.com/raw/LgZwZ7ZB",true))()
-end)
+
 
 Section:NewButton("GameOVer","Killing Npcs", function()
 for i, d in pairs(game.Workspace:GetDescendants()) do
@@ -166,6 +164,10 @@ end)
 
 Section:NewButton("Cave","Killing for 1 Second (Have BYpass)", function()
 player.Character:PivotTo(CFrame.new(-31.74873924255371, 1269.61669921875, -1018.3350830078125))
+end)
+
+Section:NewButton("Frostbiten Forest","Killing for 1 Second (Have BYpass)", function()
+player.Character:PivotTo(CFrame.new(14721.5, 134, 5537))
 end)
 
 Section:NewButton("Test Place","Killing for 1 Second (Have BYpass)", function()
