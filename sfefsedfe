@@ -142,10 +142,6 @@ local Tab = Window:NewTab("Locations")
 
 local Section = Tab:NewSection("Basic Functions")
 
-Section:NewButton("Main","Killing for 1 Second (Have BYpass)", function()
-player.Character:PivotTo(CFrame.new(603.2947998046875, 55.499996185302734, -1340.1737060546875))
-end)
-
 Section:NewButton("The Abyss","Killing for 1 Second (Have BYpass)", function()
 player.Character:PivotTo(CFrame.new(-776.22705078125, 1343.4022216796875, 3064.748291015625))
 end)
@@ -166,13 +162,6 @@ Section:NewButton("Cave","Killing for 1 Second (Have BYpass)", function()
 player.Character:PivotTo(CFrame.new(-31.74873924255371, 1269.61669921875, -1018.3350830078125))
 end)
 
-Section:NewButton("Frostbiten Forest","Killing for 1 Second (Have BYpass)", function()
-player.Character:PivotTo(CFrame.new(14721.5, 134, 5537))
-end)
-
-Section:NewButton("Test Place","Killing for 1 Second (Have BYpass)", function()
-player.Character:PivotTo(CFrame.new(-678.7194213867188, 106.69587707519531, -2512.697265625))
-end)
 
 
 
